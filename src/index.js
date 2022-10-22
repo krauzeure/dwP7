@@ -3,23 +3,22 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 //import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-import { Home } from './Pages/Home/Home'
-import { Listing } from './Pages/Listing/Listing'
-import { About } from './Pages/About/About'
-import { NotFound } from './Pages/NotFound/NotFound'
+import { AppRoutes } from './Routes'
+import { Header } from './Components/Header/Header'
+import { Footer } from './Components/Footer/Footer'
+
+import { BrowserRouter } from 'react-router-dom'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<Home />}/>
-      <Route path="/listing/:id" element={<Listing />}/>
-      <Route path="/about" element={<About />}/>
-      <Route path="*" element={<NotFound />}/>
-    </Routes>
-  </BrowserRouter>
+  <>
+    <BrowserRouter>
+      <Header />
+      <AppRoutes />
+      <Footer />
+    </BrowserRouter>
+  </>
 );
 
 // If you want to start measuring performance in your app, pass a function
