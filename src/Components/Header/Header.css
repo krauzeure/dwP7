@@ -1,0 +1,16 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+header a {
+    margin-left: 40px;
+    color: #FF6060;
+    text-decoration: none;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
