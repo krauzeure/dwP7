@@ -28,3 +28,15 @@
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
 }
+
+@media screen and (max-width: 600px) {
+    .listing-card {
+        width: 335px;
+        height: 255px;
+    }
+
+    .listing-card img {
+        width: 335px;
+        height: 255px;
+    }
+}
