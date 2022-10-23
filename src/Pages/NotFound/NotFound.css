@@ -2,11 +2,11 @@
     width: 100%;
     padding-top: 30%;
     text-align: center;
-    color: #FF6060;
+    color: var(--main);
 }
 
 .not-found-container a {
-    color: #FF6060;
+    color: var(--main);
 }
 
 .not-found-header {

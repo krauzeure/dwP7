@@ -3,12 +3,16 @@ header {
     align-items: center;
     justify-content: space-between;
     padding-top: 30px;
+    padding: 30px 5%;
 }
 
 header a {
-    margin-left: 40px;
-    color: #FF6060;
+    color: var(--main);
     text-decoration: none;
+}
+
+header .navlink {
+    margin-left: 40px;
 }
 
 header a:hover {

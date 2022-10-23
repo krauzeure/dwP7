@@ -1,10 +1,12 @@
 .banner-container {
     position: relative;
-    width: 100%;
+    width: 90%;
     max-width: 1240px;
     height: 223px;
     margin-top: 65px;
     border-radius: 25px;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .banner-overlay {
@@ -28,7 +30,7 @@
     position: absolute;
     width: 90%;
     font-weight: 500;
-    color: #FFFFFF;
+    color: var(--white);
     font-size: 48px;
     top: 50%;
     left: 50%;
