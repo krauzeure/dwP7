@@ -9,4 +9,6 @@
 body {
   font-family: 'Montserrat', sans-serif;
   padding: 0 5%;
+  max-width: 1240px;
+  margin: auto;
 }
