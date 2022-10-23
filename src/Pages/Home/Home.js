@@ -11,7 +11,7 @@ export function Home() {
         <ul className="cards-list">
         {listings.map((item, index) => {
           return (
-            <li key={index}><ListingCard imageURL={listings[index].pictures[0]} title={listings[index].title}/></li>
+            <li key={item.id}><ListingCard imageURL={listings[index].pictures[0]} title={listings[index].title} id={item.id}/></li>
           )
         })
         }
