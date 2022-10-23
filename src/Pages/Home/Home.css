@@ -1,0 +1,14 @@
+.cards-list {
+    height: auto;
+    margin: 30px 5%;
+    padding: 0 20px 20px 20px;
+    background-color: var(--light-grey);
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.cards-list li {
+    list-style-type: none;
+}

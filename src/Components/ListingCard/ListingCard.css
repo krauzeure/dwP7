@@ -1,0 +1,23 @@
+.listing-card {
+    width: 340px;
+    height: 340px;
+    background-color: var(--main);
+    border-radius: 10px;
+    margin: 20px 0 0 0;
+    position: relative;
+}
+
+.listing-card img {
+    width: 340px;
+    height: 340px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.listing-card-title {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding-right: 20px;
+    color: var(--white);
+}
