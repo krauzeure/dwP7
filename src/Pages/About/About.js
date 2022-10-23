@@ -1,5 +1,8 @@
+import { Banner } from '../../Components/Banner/Banner'
+import AboutBanner from '../../Components/Banner/about-banner.png'
+
 export function About() {
   return (
-    <div>About</div>
+    <Banner img={AboutBanner} alt={"Partout et aillers"}/>
   )
 }
