@@ -9,6 +9,8 @@ header {
 header a {
     color: var(--main);
     text-decoration: none;
+    font-size: 24px;
+    font-weight: 500;
 }
 
 header .navlink {
@@ -21,4 +23,11 @@ header a:hover {
 
 nav .active-link {
     text-decoration: underline;
+}
+
+@media screen and (max-width: 600px) {
+    header a {
+        text-transform: uppercase;
+        font-size: 12px;
+    }
 }
