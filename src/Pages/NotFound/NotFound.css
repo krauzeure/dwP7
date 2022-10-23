@@ -1,6 +1,6 @@
 .not-found-container {
     width: 100%;
-    padding-top: 30%;
+    padding-top: 7%;
     text-align: center;
     color: var(--main);
 }
@@ -15,5 +15,5 @@
 }
 
 .not-found-text {
-    margin-bottom: 300px;
+    margin-bottom: 150px;
 }
