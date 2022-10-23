@@ -1,0 +1,19 @@
+.not-found-container {
+    width: 100%;
+    padding-top: 30%;
+    text-align: center;
+    color: #FF6060;
+}
+
+.not-found-container a {
+    color: #FF6060;
+}
+
+.not-found-header {
+    font-size: 288px;
+    font-weight: 700;
+}
+
+.not-found-text {
+    margin-bottom: 300px;
+}
