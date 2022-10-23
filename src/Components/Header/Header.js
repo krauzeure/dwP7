@@ -10,14 +10,14 @@ export function Header() {
             <NavLink 
             to="/" end
             className={({isActive}) => {
-                return isActive ? "active-link" : ""
+                return isActive ? " navlink active-link" : "navlink"
             }}
             >Accueil</NavLink>
 
             <NavLink 
             to="/about"
             className={({isActive}) => {
-                return isActive ? "active-link" : ""
+                return isActive ? "active-link" : "navlink"
             }}
             >A propos</NavLink>
         </nav>
