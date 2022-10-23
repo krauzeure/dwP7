@@ -17,7 +17,7 @@ export function Header() {
             <NavLink 
             to="/about"
             className={({isActive}) => {
-                return isActive ? "active-link" : "navlink"
+                return isActive ? "navlink active-link" : "navlink"
             }}
             >A propos</NavLink>
         </nav>
