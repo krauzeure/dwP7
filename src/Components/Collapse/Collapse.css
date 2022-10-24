@@ -25,6 +25,7 @@
     border-radius: 10px;
     transition: all 400ms ease-in-out;
     opacity: 0;
+    visibility: hidden;
     color: var(--main);
     font-size: 18px;
     font-weight: 400;
@@ -46,4 +47,5 @@
 .collapse-toggle-animated {
     transition: all 400ms ease-in-out;
     opacity: 1;
+    visibility: visible;
 }
