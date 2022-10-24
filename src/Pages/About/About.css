@@ -10,7 +10,7 @@
     margin-top: 30px;
 }
 
-@media screen and (max-width: 690px) {
+@media screen and (max-width: 750px) {
     
     .about-collapse .collapse {
     width: 90%;

@@ -19,7 +19,7 @@
     position: relative;
 }
 
-@media screen and (max-width: 690px) {
+@media screen and (max-width: 750px) {
     .cards-list {
         flex-direction: column;
         background-color: var(--white);

@@ -17,3 +17,11 @@
 .not-found-text {
     margin-bottom: 150px;
 }
+
+@media screen and (max-width: 750px) {
+    
+    .not-found-header {
+        font-size: 96px;
+    }
+    
+}

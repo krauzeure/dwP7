@@ -38,7 +38,7 @@
     text-align: center;
 }
 
-@media screen and (max-width: 690px) {
+@media screen and (max-width: 750px) {
     .banner-container {
         height: 111px;
     }
