@@ -5,8 +5,17 @@
     margin-top: 10px;
 }
 
-.about-collapse .collapse
-{
+.about-collapse .collapse {
     width: 70%;
     margin-top: 30px;
+}
+
+@media screen and (max-width: 690px) {
+    
+    .about-collapse .collapse {
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+    
 }

@@ -43,8 +43,16 @@
         height: 111px;
     }
 
+    .banner-container-about {
+        height: 223px;
+    }
+
     .banner-overlay {
         height: 111px;
+    }
+
+    .banner-overlay-about {
+        height: 223px;
     }
     
     .banner-container h1 {
