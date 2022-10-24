@@ -59,6 +59,6 @@
     margin-right: 10px;
 }
 
-.listing-rating-star {
-    color-fill: var(--main);
+.listing-rating img {
+    margin-left: 10px;
 }
