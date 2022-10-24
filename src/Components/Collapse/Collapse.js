@@ -17,7 +17,14 @@ export function Collapse(props) {
         setHeightEl(`${refHeight.current.scrollHeight}px`);
     }, [])
 
-    console.log(heightEl)
+    let classes = "";
+    if(toggle && props.source === "about") {
+        classes = "collapse-toggle collapse-toggle-animated about-collapse-toggle"
+    } else if (toggle) {
+        classes = "collapse-toggle collapse-toggle-animated"
+    } else {
+        classes = "collapse-toggle"
+    }
 
   return (
     <div className="collapse">
@@ -28,7 +35,7 @@ export function Collapse(props) {
             <img src={Chevron} alt="chevron" />
         </div>
         <div 
-        className={toggle ? "collapse-toggle collapse-toggle-animated about-collapse-toggle" : "collapse-toggle about-collapse-toggle"} 
+        className={classes}
         ref={refHeight}
         style={{ height: toggle ? `${heightEl}` : "0px"}}
         >
