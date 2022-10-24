@@ -2,6 +2,8 @@ import { useParams } from 'react-router-dom'
 import { listings } from '../../data/listings'
 import './Listing.css'
 import { Tag } from '../../Components/Tag/Tag';
+import star from './star.svg'
+import starFilled from './star-filled.svg'
 
 export function Listing() {
 
@@ -9,7 +11,20 @@ export function Listing() {
   const listingId = params.id;
 
   const currentListing = listings.filter(el => el.id === listingId);
-  console.log(currentListing)
+
+
+  const totalRatings = 5;
+  const numberOfStars = parseInt(currentListing[0].rating);
+
+  const listingRating = []
+  for(let i = 0; i < numberOfStars; i++) {
+    listingRating.push(<img key={i}src={starFilled} alt="rating"/>)
+  }
+
+  for(let i = numberOfStars; i < totalRatings; i++) {
+    listingRating.push(<img key={i}src={star} alt="rating"/>)
+  }
+
 
   return (
     <div className="listing-page">
@@ -39,6 +54,9 @@ export function Listing() {
               <li key={`${listingId}-${item}`}><Tag text={item} /></li>
             )
           })}
+        </div>
+        <div className="listing-rating">
+          {listingRating}
         </div>
       </div>
     </div>

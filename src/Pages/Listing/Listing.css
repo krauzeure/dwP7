@@ -44,6 +44,12 @@
     margin-left: 10px;
 }
 
+.listing-tag-rating {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .listing-all-tags {
     display: flex;
 }
@@ -51,4 +57,8 @@
 .listing-all-tags li {
     list-style-type: none;
     margin-right: 10px;
+}
+
+.listing-rating-star {
+    color-fill: var(--main);
 }
