@@ -34,5 +34,6 @@
         margin: 10px;
         height: 255px;
         position: relative;
+        background-color: var(--white);
     }
 }
