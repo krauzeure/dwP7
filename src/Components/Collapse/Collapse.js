@@ -28,7 +28,7 @@ export function Collapse(props) {
             <img src={Chevron} alt="chevron" />
         </div>
         <div 
-        className={toggle ? "collapse-toggle collapse-toggle-animated" : "collapse-toggle"} 
+        className={toggle ? "collapse-toggle collapse-toggle-animated about-collapse-toggle" : "collapse-toggle about-collapse-toggle"} 
         ref={refHeight}
         style={{ height: toggle ? `${heightEl}` : "0px"}}
         >

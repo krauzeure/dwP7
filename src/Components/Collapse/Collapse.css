@@ -34,6 +34,10 @@
     font-weight: 400;
 }
 
+.about-collapse-toggle {
+    border-radius: 5px;
+}
+
 .collapse-toggle p {
     pointer-events: none;
     padding: 30px 20px;
