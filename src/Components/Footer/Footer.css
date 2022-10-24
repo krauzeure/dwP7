@@ -7,7 +7,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
 }
 
 .footer-container img {
