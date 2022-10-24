@@ -87,8 +87,8 @@
         flex-direction: column;
     }
 
-    .listing-desc-equip div:nth-child(2) {
-        margin-top: 20px;
+    .collapse:nth-child(2) {
+        margin-top: 30px;
     }
 
 }
