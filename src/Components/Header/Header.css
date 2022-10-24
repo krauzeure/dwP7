@@ -25,9 +25,13 @@ nav .active-link {
     text-decoration: underline;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 690px) {
     header a {
         text-transform: uppercase;
         font-size: 12px;
+    }
+
+    header .navlink {
+        margin-left: 10px;
     }
 }
