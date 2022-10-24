@@ -13,8 +13,20 @@ export function Collapse(props) {
     }
     const refHeight = useRef();
 
+    // We create a function updating the height of our element
+    const updateHeightEl = () => {
+        setHeightEl(`${refHeight.current.scrollHeight}px`);
+    }
+
+    // We use useEffect to get the height of our element when the composant is rendered
     useEffect(() => {
         setHeightEl(`${refHeight.current.scrollHeight}px`);
+    }, [])
+
+    // We use UseEffect to listen to a page resize and call the updateHeightEl function
+    useEffect(() => {
+        window.addEventListener("resize", updateHeightEl);
+        return () => window.removeEventListener("resize", updateHeightEl);
     }, [])
 
     let classes = "";
