@@ -1,0 +1,9 @@
+.listing-tag {
+    padding: 3px 30px;
+    width: fit-content;
+    background-color: var(--main);
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 10px;
+}
