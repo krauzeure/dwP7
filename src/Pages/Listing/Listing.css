@@ -1,21 +1,33 @@
-.listing-details {
+.listing-page {
+    padding: 0 5%;
     color: var(--main);
 }
 
-.listing-info-host {
+.listing-main-info {
     display: flex;
     justify-content: space-between;
     margin: 24px 0;
-}
+} 
 
 .listing-information h1 {
     font-size: 36px;
     font-weight: 500;
 }
 
+.listing-all-tags {
+    display: flex;
+    margin-top: 20px;
+}
+
+.listing-all-tags li {
+    list-style-type: none;
+    margin-right: 10px;
+}
+
 .listing-host {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
 }
 
 .listing-host p {
@@ -32,19 +44,8 @@
     margin-left: 10px;
 }
 
-.listing-tag-rating {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.listing-all-tags {
-    display: flex;
-}
-
-.listing-all-tags li {
-    list-style-type: none;
-    margin-right: 10px;
+.listing-rating {
+    margin-top: 10px;
 }
 
 .listing-rating img {
@@ -63,4 +64,31 @@
 
 .listing-desc-equip div:nth-child(1) {
     margin-right: 75px;
+}
+
+@media screen and (max-width: 750px) {
+    .listing-main-info {
+        flex-direction: column;
+    }
+
+    .listing-rating {
+        margin-top: 0;
+    }
+
+    .listing-host-rating {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        margin-top: 15px;
+    }
+
+    .listing-desc-equip {
+        flex-direction: column;
+    }
+
+    .listing-desc-equip div:nth-child(2) {
+        margin-top: 20px;
+    }
+
 }

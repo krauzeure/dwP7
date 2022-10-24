@@ -33,33 +33,33 @@ export function Listing() {
 
         <Slideshow photos={currentListing[0].pictures} title={currentListing[0].title}/>
 
-      <div className="listing-details">
-        <div className="listing-info-host">
+        <div className="listing-main-info">
 
-          <div className="listing-info">
-            <h1>{currentListing[0].title}</h1>
-            <p>{currentListing[0].location}</p>
+          <div className="listing-info-tags">
+            <div className="listing-info">
+              <h1>{currentListing[0].title}</h1>
+              <p>{currentListing[0].location}</p>
+            </div>
+            <div className="listing-all-tags">
+              {currentListing[0].tags.map(item => {
+                return (
+                  <li key={`${listingId}-${item}`}><Tag text={item} /></li>
+                )
+              })}
+            </div>
           </div>
 
-          <div className="listing-host">
-            <p>{currentListing[0].host.name}</p>
-            <img src={currentListing[0].host.picture} alt={currentListing[0].host.name} />
+          <div className="listing-host-rating">
+            <div className="listing-host">
+                <p>{currentListing[0].host.name}</p>
+                <img src={currentListing[0].host.picture} alt={currentListing[0].host.name} />
+            </div>
+            <div className="listing-rating">
+              {listingRating}
+            </div>
           </div>
-        </div>
-      </div>
 
-      <div className="listing-tag-rating">
-        <div className="listing-all-tags">
-          {currentListing[0].tags.map(item => {
-            return (
-              <li key={`${listingId}-${item}`}><Tag text={item} /></li>
-            )
-          })}
         </div>
-        <div className="listing-rating">
-          {listingRating}
-        </div>
-      </div>
 
       <div className="listing-desc-equip">
         <Collapse heading="Description" text={currentListing[0].description} />
