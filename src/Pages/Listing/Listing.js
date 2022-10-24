@@ -2,6 +2,7 @@ import { useParams } from 'react-router-dom'
 import { listings } from '../../data/listings'
 import './Listing.css'
 import { Tag } from '../../Components/Tag/Tag';
+import { Collapse } from '../../Components/Collapse/Collapse';
 import star from './star.svg'
 import starFilled from './star-filled.svg'
 
@@ -58,6 +59,15 @@ export function Listing() {
         <div className="listing-rating">
           {listingRating}
         </div>
+      </div>
+
+      <div className="listing-desc-equip">
+        <Collapse heading="Description" text={currentListing[0].description} />
+        <Collapse heading="Équipements" text={
+          currentListing[0].equipments.map(item => {
+            return <li key={`${listingId}-${item}`}>{item}</li>
+          })
+          } />
       </div>
     </div>
   )

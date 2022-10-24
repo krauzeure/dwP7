@@ -1,0 +1,49 @@
+/* .collapse {
+    width: 47%;
+} */
+
+.collapse-visible {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--main);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.collapse-visible img {
+    transform: rotate(0deg);
+}
+
+.collapse-visible-active img {
+    transform: rotate(180deg);
+}
+
+.collapse-visible h2 {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--white);
+}
+
+.collapse-toggle {
+    background-color: var(--light-grey);
+    border-radius: 10px;
+    transition: all 400ms ease-in-out;
+    opacity: 0;
+    color: var(--main);
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.collapse-toggle p {
+    pointer-events: none;
+    padding: 30px 20px;
+}
+
+.collapse-toggle li {
+    list-style-type: none;
+}
+
+.collapse-toggle-animated {
+    transition: all 400ms ease-in-out;
+    opacity: 1;
+}

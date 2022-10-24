@@ -62,3 +62,17 @@
 .listing-rating img {
     margin-left: 10px;
 }
+
+.listing-desc-equip {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.listing-desc-equip div {
+    width: 100%;
+}
+
+.listing-desc-equip div:nth-child(1) {
+    margin-right: 75px;
+}

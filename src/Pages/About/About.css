@@ -1,0 +1,12 @@
+.about-collapse {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.about-collapse .collapse
+{
+    width: 70%;
+    margin-top: 30px;
+}
