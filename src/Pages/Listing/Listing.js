@@ -33,7 +33,13 @@ export function Listing() {
       </div>
 
       <div className="listing-tag-rating">
-        <Tag text={currentListing[0].tags[0]}/>
+        <div className="listing-all-tags">
+          {currentListing[0].tags.map(item => {
+            return (
+              <li key={`${listingId}-${item}`}><Tag text={item} /></li>
+            )
+          })}
+        </div>
       </div>
     </div>
   )

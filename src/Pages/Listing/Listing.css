@@ -43,3 +43,12 @@
     border-radius: 100%;
     margin-left: 10px;
 }
+
+.listing-all-tags {
+    display: flex;
+}
+
+.listing-all-tags li {
+    list-style-type: none;
+    margin-right: 10px;
+}
