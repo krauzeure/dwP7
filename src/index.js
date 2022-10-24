@@ -13,7 +13,9 @@ root.render(
   <>
     <BrowserRouter>
       <Header />
-      <AppRoutes />
+      <main className="page-container">
+        <AppRoutes />
+      </main>
       <Footer />
     </BrowserRouter>
   </>
