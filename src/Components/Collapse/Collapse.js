@@ -1,16 +1,21 @@
 import Chevron from './Chevron.svg'
+
 import './Collapse.css'
 
 import { useState, useRef, useEffect } from 'react'
 
 export function Collapse(props) {
 
+    // Creating our states
     const [toggle, setToggle] = useState(false);
     const [heightEl, setHeightEl] = useState();
 
+    // Function setting the toggle state to the opposite of what it was
     const changeToggle = () => {
         setToggle(!toggle);
     }
+
+    // Using useRef to select a specific item
     const refHeight = useRef();
 
     // We create a function updating the height of our element
@@ -29,6 +34,7 @@ export function Collapse(props) {
         return () => window.removeEventListener("resize", updateHeightEl);
     }, [])
 
+    // Defining our classes depending on the layout we want
     let classes = "";
     if(toggle && props.source === "about") {
         classes = "collapse-toggle collapse-toggle-animated about-collapse-toggle"

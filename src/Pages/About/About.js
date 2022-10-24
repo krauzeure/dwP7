@@ -1,7 +1,9 @@
-import { Banner } from '../../Components/Banner/Banner'
-import AboutBanner from '../../Components/Banner/about-banner.png'
-import { Collapse } from '../../Components/Collapse/Collapse'
 import './About.css'
+
+import AboutBanner from '../../Components/Banner/about-banner.png'
+
+import { Banner } from '../../Components/Banner/Banner'
+import { Collapse } from '../../Components/Collapse/Collapse'
 
 export function About() {
   return (
