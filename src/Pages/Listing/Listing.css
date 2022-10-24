@@ -1,0 +1,45 @@
+.listing-slideshow {
+    max-width: 1240px;
+    height: 415px;
+}
+
+.listing-slideshow img {
+    object-fit: cover;
+    width: 100%;
+    height: 415px;
+    border-radius: 25px;
+}
+
+.listing-details {
+    color: var(--main);
+}
+
+.listing-info-host {
+    display: flex;
+    justify-content: space-between;
+    margin: 24px 0;
+}
+
+.listing-information h1 {
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.listing-host {
+    display: flex;
+    align-items: center;
+}
+
+.listing-host p {
+    max-width: 100px;
+    white-space: wrap;
+    text-align: right;
+}
+
+.listing-host img {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 100%;
+    margin-left: 10px;
+}
