@@ -16,7 +16,7 @@ The integration for this project was done with React (18.2.0). I also used React
 
 To install the project on your machine, clone the repo with the `git clone` command.
 
-Once you've downloaded the repo, start the project with the `npm start` command from the root folder.
+Once you've downloaded the repo, install the project with the `npm install` command from the root folder. Start the project with the `npm start` command.
 
 ## Status
 
