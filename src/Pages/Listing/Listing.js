@@ -5,6 +5,7 @@ import { Tag } from '../../Components/Tag/Tag';
 import { Collapse } from '../../Components/Collapse/Collapse';
 import star from './star.svg'
 import starFilled from './star-filled.svg'
+import { Slideshow } from '../../Components/Slideshow/Slideshow';
 
 export function Listing() {
 
@@ -29,9 +30,8 @@ export function Listing() {
 
   return (
     <div className="listing-page">
-      <div className='listing-slideshow'>
-        <img src={currentListing[0].pictures[0]} alt={currentListing[0].title}/>
-      </div>
+
+        <Slideshow photos={currentListing[0].pictures} title={currentListing[0].title}/>
 
       <div className="listing-details">
         <div className="listing-info-host">
