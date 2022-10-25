@@ -8,6 +8,7 @@ import { listings } from '../../data/listings'
 import { Tag } from '../../Components/Tag/Tag';
 import { Collapse } from '../../Components/Collapse/Collapse';
 import { Slideshow } from '../../Components/Slideshow/Slideshow';
+import { NotFound } from '../NotFound/NotFound';
 
 import { useParams } from 'react-router-dom'
 
@@ -17,25 +18,30 @@ export function Listing() {
   const params = useParams();
   const listingId = params.id;
 
-  // Getting the listings information from the ID
-  const currentListing = listings.filter(el => el.id === listingId);
+  let allListingsIds = listings.reduce((acc, curVal) => acc.concat(curVal.id), []);
 
-  // Setting the total number of stars and the listings number of stars
-  const totalRatings = 5;
-  const numberOfStars = parseInt(currentListing[0].rating);
+  if(allListingsIds.includes(listingId) === false) {
+    return <NotFound />
+  } 
+      // Getting the listings information from the ID
+      const currentListing = listings.filter(el => el.id === listingId);
 
-  // Initializing an empty array
-  const listingRating = []
+      // Setting the total number of stars and the listings number of stars
+      const totalRatings = 5;
+      const numberOfStars = parseInt(currentListing[0].rating);
 
-  //Looping on the listings stars to add them to the array
-  for(let i = 0; i < numberOfStars; i++) {
-    listingRating.push(<img key={i}src={starFilled} alt="rating"/>)
-  }
+      // Initializing an empty array
+      const listingRating = []
 
-  // Looping on the last empty spaces to add grey stars
-  for(let i = numberOfStars; i < totalRatings; i++) {
-    listingRating.push(<img key={i}src={star} alt="rating"/>)
-  }
+      //Looping on the listings stars to add them to the array
+      for(let i = 0; i < numberOfStars; i++) {
+        listingRating.push(<img key={i}src={starFilled} alt="rating"/>)
+      }
+
+      // Looping on the last empty spaces to add grey stars
+      for(let i = numberOfStars; i < totalRatings; i++) {
+        listingRating.push(<img key={i}src={star} alt="rating"/>)
+      }
 
   return (
     <div className="listing-page">
