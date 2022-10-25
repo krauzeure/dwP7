@@ -33,7 +33,7 @@ export function Slideshow(props) {
 
   return (
     <>
-        <div className='listing-slideshow'>
+        <section className='listing-slideshow'>
             <span 
             className="slideshow-button slideshow-back"
             onClick={previousPhoto}>
@@ -51,7 +51,7 @@ export function Slideshow(props) {
             onClick={nextPhoto}>
                 <img src={forwardButton} alt="forward button"/>
             </span>
-        </div>
+        </section>
     </>
   )
 }

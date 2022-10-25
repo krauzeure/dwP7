@@ -42,7 +42,7 @@ export function Listing() {
 
         <Slideshow photos={currentListing[0].pictures} title={currentListing[0].title}/>
 
-        <div className="listing-main-info">
+        <section className="listing-main-info">
 
           <div className="listing-info-tags">
             <div className="listing-info">
@@ -68,16 +68,16 @@ export function Listing() {
             </div>
           </div>
 
-        </div>
+        </section>
 
-      <div className="listing-desc-equip">
+      <section className="listing-desc-equip">
         <Collapse heading="Description" text={currentListing[0].description} />
         <Collapse heading="Équipements" text={
           currentListing[0].equipments.map(item => {
             return <li key={`${listingId}-${item}`}>{item}</li>
           })
         } />
-      </div>
+      </section>
 
     </div>
   )
