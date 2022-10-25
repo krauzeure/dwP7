@@ -82,6 +82,7 @@
 
     .listing-rating {
         margin-top: 0;
+        min-width: 100px;
     }
 
     .listing-host-rating {
