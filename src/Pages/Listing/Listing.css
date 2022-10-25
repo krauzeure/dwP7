@@ -17,11 +17,19 @@
 .listing-all-tags {
     display: flex;
     margin-top: 20px;
+    flex-wrap: wrap;
 }
 
 .listing-all-tags li {
     list-style-type: none;
     margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.listing-host-rating {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .listing-host {
@@ -46,6 +54,7 @@
 
 .listing-rating {
     margin-top: 10px;
+    min-width: 200px;
 }
 
 .listing-rating img {
@@ -76,7 +85,6 @@
     }
 
     .listing-host-rating {
-        display: flex;
         align-items: center;
         flex-direction: row-reverse;
         justify-content: space-between;
