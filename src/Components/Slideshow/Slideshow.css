@@ -2,6 +2,7 @@
     max-width: 1240px;
     height: 415px;
     position: relative;
+    border-radius: 25px;
 }
 
 .slideshow-image {
