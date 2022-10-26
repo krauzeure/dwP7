@@ -30,18 +30,10 @@ export function Listing() {
       const totalRatings = 5;
       const numberOfStars = parseInt(currentListing[0].rating);
 
-      // Initializing an empty array
-      const listingRating = []
-
-      //Looping on the listings stars to add them to the array
-      for(let i = 0; i < numberOfStars; i++) {
-        listingRating.push(<img key={i}src={starFilled} alt="rating"/>)
-      }
-
-      // Looping on the last empty spaces to add grey stars
-      for(let i = numberOfStars; i < totalRatings; i++) {
-        listingRating.push(<img key={i}src={star} alt="rating"/>)
-      }
+      // Initializing an array with 5 items
+      const listingRating = Array.from(Array(totalRatings))
+      // Filling the array with the filled stars according to the rating, and then filling it out with grey stars
+      listingRating.fill(starFilled, 0, numberOfStars).fill(star, numberOfStars, totalRatings)
 
   return (
     <div className="listing-page">
@@ -70,7 +62,9 @@ export function Listing() {
                 <img src={currentListing[0].host.picture} alt={currentListing[0].host.name} />
             </div>
             <div className="listing-rating">
-              {listingRating}
+              {listingRating.map((item, index) => {
+                return <img key={`${index}-${item}`} src={item} alt="rating"/>
+              })}
             </div>
           </div>
 
