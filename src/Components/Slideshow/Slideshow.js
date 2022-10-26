@@ -3,7 +3,7 @@ import './Slideshow.css'
 import forwardButton from './forward-button.svg'
 import backButton from './back-button.svg'
 
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 export function Slideshow(props) {
 
@@ -15,12 +15,28 @@ export function Slideshow(props) {
 
     // Function to go to the next photo with an exception if we're on the last photo
     const nextPhoto = () => {
+
         if(currentImg + 1 === numberOfImages) {
             setCurrentImg(0);
         } else {
             setCurrentImg(currentImg + 1);
         }
     }
+
+    const refImage = useRef();
+
+    useEffect(() => {
+        refImage.current.classList.add("slideshow-animated");
+        
+        const countTimer = setTimeout(() => {
+            refImage.current.classList.remove("slideshow-animated");
+            
+        }, 500);
+        // and clear this timer when the component is unmounted
+        return function cleanup() {
+          clearTimeout(countTimer);
+        };
+    }, [currentImg])
 
     // Function to go to the previous photo with an exception if we're on the first photo
     const previousPhoto = () => {
@@ -44,6 +60,7 @@ export function Slideshow(props) {
             src={props.photos[currentImg]} 
             alt={props.title} 
             className="slideshow-image"
+            ref={refImage}
             />
 
             <span 
