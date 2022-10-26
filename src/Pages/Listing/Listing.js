@@ -20,6 +20,7 @@ export function Listing() {
 
   let allListingsIds = listings.reduce((acc, curVal) => acc.concat(curVal.id), []);
 
+  // If the what's after listing/ in the URL doesn't match our listing ids, we render the NotFound component
   if(allListingsIds.includes(listingId) === false) {
     return <NotFound />
   } 
