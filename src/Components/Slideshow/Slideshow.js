@@ -33,6 +33,15 @@ export function Slideshow(props) {
         }
     }
 
+    // Adding an eventListener on the left and right keys to allow users to switch photos from their keyboard
+    window.addEventListener("keydown", (event) => {
+        if(event.key === "ArrowRight") {
+            nextPhoto();
+        } else if (event.key === "ArrowLeft") {
+            previousPhoto();
+        }
+    })
+
   return (
     <>
         <section className='listing-slideshow'>
