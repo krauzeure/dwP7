@@ -3,7 +3,7 @@ import './Slideshow.css'
 import forwardButton from './forward-button.svg'
 import backButton from './back-button.svg'
 
-import { useState, useEffect, useRef } from 'react'
+import { useState } from 'react'
 
 export function Slideshow(props) {
 
@@ -23,23 +23,9 @@ export function Slideshow(props) {
         }
     }
 
-    const refImage = useRef();
-
-    useEffect(() => {
-        refImage.current.classList.add("slideshow-animated");
-        
-        const countTimer = setTimeout(() => {
-            refImage.current.classList.remove("slideshow-animated");
-            
-        }, 500);
-        // and clear this timer when the component is unmounted
-        return function cleanup() {
-          clearTimeout(countTimer);
-        };
-    }, [currentImg])
-
     // Function to go to the previous photo with an exception if we're on the first photo
     const previousPhoto = () => {
+
         if(currentImg === 0) {
             setCurrentImg(numberOfImages - 1);
         } else {
@@ -56,12 +42,19 @@ export function Slideshow(props) {
                 <img src={backButton} alt="back button"/>
             </span>
 
-            <img 
-            src={props.photos[currentImg]} 
-            alt={props.title} 
-            className="slideshow-image"
-            ref={refImage}
-            />
+            {props.photos.map((item, index) => {
+                return (
+                    <img 
+                    src={item} 
+                    alt={item.title} 
+                    className={`slideshow-image slideshow-image-${index}`}
+                    style={{ 
+                        // We calculate the translate based on the index and the current image
+                        transform: `translateX(calc((${index} - ${currentImg}) * 100%)`
+                     }}
+                    />
+                )
+            })}
 
             <span 
             className='slideshow-button slideshow-forward'
