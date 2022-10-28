@@ -58,6 +58,7 @@ export function Slideshow(props) {
                     src={item} 
                     alt={`photo ${props.title} - ${index + 1}`} 
                     className={`slideshow-image slideshow-image-${index}`}
+                    key={`${props.title} - ${index}`}
                     style={{ 
                         // We calculate the translate based on the index and the current image
                         transform: `translateX(calc((${index} - ${currentImg}) * 100%)`
