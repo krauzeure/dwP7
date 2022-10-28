@@ -44,9 +44,10 @@ export function Slideshow(props) {
 
             {props.photos.map((item, index) => {
                 return (
+                    // eslint-disable-next-line jsx-a11y/img-redundant-alt
                     <img 
                     src={item} 
-                    alt={item.title} 
+                    alt={`photo ${props.title} - ${index + 1}`} 
                     className={`slideshow-image slideshow-image-${index}`}
                     style={{ 
                         // We calculate the translate based on the index and the current image
