@@ -28,3 +28,11 @@
 .slideshow-forward {
     right: 25px;
 }
+
+@media screen and (max-width: 750px) {
+
+    .slideshow-button img {
+        width: 15px;
+    }
+
+}
