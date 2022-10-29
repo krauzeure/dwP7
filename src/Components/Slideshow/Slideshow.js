@@ -3,12 +3,15 @@ import './Slideshow.css'
 import forwardButton from './forward-button.svg'
 import backButton from './back-button.svg'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 export function Slideshow(props) {
 
     // Creating our state
     const [currentImg, setCurrentImg] = useState(0);
+
+    const [startTouch, setStartTouch] = useState(0);
+    const [endTouch, setEndTouch] = useState(0);
 
     // Counting the number of photos for this listing
     const numberOfImages = props.photos.length;
@@ -42,9 +45,37 @@ export function Slideshow(props) {
         }
     })
 
+    // function to get the X position at the start of the touch
+    const touchStart = (e) => {
+        setStartTouch(e.changedTouches[0].screenX);
+    }
+
+    // function to get the X position at the end of the touch
+    const touchEnd = (e) => {
+        setEndTouch(e.changedTouches[0].screenX)
+    }
+
+    useEffect(() => {
+        // If the user swiped to the left, we call our function nextPhoto and clear our states
+        if(startTouch - endTouch > 150) {
+            nextPhoto();
+            setStartTouch(0)
+            setEndTouch(0)
+        // If the user swiped to the right, we call our function previousPhoto and clear our states
+        } else if (endTouch - startTouch > 150) {
+            previousPhoto();
+            setStartTouch(0)
+            setEndTouch(0)
+        }
+    }, [endTouch])
+
   return (
     <>
-        <section className='listing-slideshow'>
+        <section 
+        className='listing-slideshow'
+        onTouchStart={touchStart}
+        onTouchEnd={touchEnd}
+        >
             <span 
             className="slideshow-button slideshow-back"
             onClick={previousPhoto}>
