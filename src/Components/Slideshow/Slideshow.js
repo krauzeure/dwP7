@@ -57,12 +57,12 @@ export function Slideshow(props) {
 
     useEffect(() => {
         // If the user swiped to the left, we call our function nextPhoto and clear our states
-        if(startTouch - endTouch > 150) {
+        if(startTouch - endTouch > 40) {
             nextPhoto();
             setStartTouch(0)
             setEndTouch(0)
         // If the user swiped to the right, we call our function previousPhoto and clear our states
-        } else if (endTouch - startTouch > 150) {
+        } else if (endTouch - startTouch > 40) {
             previousPhoto();
             setStartTouch(0)
             setEndTouch(0)
@@ -84,10 +84,9 @@ export function Slideshow(props) {
 
             {props.photos.map((item, index) => {
                 return (
-                    // eslint-disable-next-line jsx-a11y/img-redundant-alt
                     <img 
                     src={item} 
-                    alt={`photo ${props.title} - ${index + 1}`} 
+                    alt={`${props.title} - ${index + 1}`} 
                     className={`slideshow-image slideshow-image-${index}`}
                     key={`${props.title} - ${index}`}
                     style={{ 
