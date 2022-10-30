@@ -3,7 +3,7 @@ import './Slideshow.css'
 import forwardButton from './forward-button.svg'
 import backButton from './back-button.svg'
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 export function Slideshow(props) {
 
@@ -11,7 +11,6 @@ export function Slideshow(props) {
     const [currentImg, setCurrentImg] = useState(0);
 
     const [startTouch, setStartTouch] = useState(0);
-    const [endTouch, setEndTouch] = useState(0);
 
     // Counting the number of photos for this listing
     const numberOfImages = props.photos.length;
@@ -50,24 +49,21 @@ export function Slideshow(props) {
         setStartTouch(e.changedTouches[0].screenX);
     }
 
-    // function to get the X position at the end of the touch
+    /* The touchEnd function gets the X position at the end of the touch
+    Then it calculates the total distance of the swipe and call the nextPhoto or previousPhoto functions depending on the swipe.
+    After calling the photo function, we clear our state */
     const touchEnd = (e) => {
-        setEndTouch(e.changedTouches[0].screenX)
-    }
-
-    useEffect(() => {
-        // If the user swiped to the left, we call our function nextPhoto and clear our states
+        const endTouch = e.changedTouches[0].screenX;
+        // If the user swiped to the left, we call our function nextPhoto and clear our state
         if(startTouch - endTouch > 40) {
             nextPhoto();
             setStartTouch(0)
-            setEndTouch(0)
-        // If the user swiped to the right, we call our function previousPhoto and clear our states
+        // If the user swiped to the right, we call our function previousPhoto and clear our state
         } else if (endTouch - startTouch > 40) {
             previousPhoto();
             setStartTouch(0)
-            setEndTouch(0)
         }
-    }, [endTouch])
+    }
 
   return (
     <>
