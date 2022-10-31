@@ -1,6 +1,6 @@
-import './Home.css'
-
 import HeaderBanner from '../../Components/Banner/home-banner.png'
+
+import './Home.css'
 
 import { Banner } from '../../Components/Banner/Banner'
 import { ListingCard } from '../../Components/ListingCard/ListingCard'

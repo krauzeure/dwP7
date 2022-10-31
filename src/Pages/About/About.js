@@ -1,6 +1,6 @@
-import './About.css'
-
 import AboutBanner from '../../Components/Banner/about-banner.png'
+
+import './About.css'
 
 import { Banner } from '../../Components/Banner/Banner'
 import { Collapse } from '../../Components/Collapse/Collapse'

@@ -1,7 +1,7 @@
-import './Slideshow.css'
-
 import forwardButton from './forward-button.svg'
 import backButton from './back-button.svg'
+
+import './Slideshow.css'
 
 import { useState } from 'react'
 

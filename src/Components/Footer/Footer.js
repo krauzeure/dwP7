@@ -1,6 +1,6 @@
-import './Footer.css'
-
 import Logo from './logo.png'
+
+import './Footer.css'
 
 export function Footer() {
   return (

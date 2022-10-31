@@ -1,7 +1,7 @@
-import './Listing.css'
-
 import star from './star.svg'
 import starFilled from './star-filled.svg'
+
+import './Listing.css'
 
 import { listings } from '../../data/listings'
 
