@@ -21,6 +21,10 @@
     z-index: 1;
 }
 
+.slideshow-button-hidden {
+    display: none;
+}
+
 .slideshow-back {
     left: 25px;
 }

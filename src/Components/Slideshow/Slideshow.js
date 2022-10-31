@@ -73,7 +73,7 @@ export function Slideshow(props) {
         onTouchEnd={touchEnd}
         >
             <span 
-            className="slideshow-button slideshow-back"
+            className={numberOfImages > 1 ? "slideshow-button slideshow-back" : "slideshow-button slideshow-back slideshow-button-hidden"}
             onClick={previousPhoto}>
                 <img src={backButton} alt="back button"/>
             </span>
@@ -94,7 +94,7 @@ export function Slideshow(props) {
             })}
 
             <span 
-            className='slideshow-button slideshow-forward'
+            className={numberOfImages > 1 ? "slideshow-button slideshow-forward" : "slideshow-button slideshow-forward slideshow-button-hidden"}
             onClick={nextPhoto}>
                 <img src={forwardButton} alt="forward button"/>
             </span>
