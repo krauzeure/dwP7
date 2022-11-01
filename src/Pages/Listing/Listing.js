@@ -30,7 +30,7 @@ export function Listing() {
 
       // Setting the total number of stars and the listings number of stars
       const totalRatings = 5;
-      const numberOfStars = parseInt(currentListing[0].rating);
+      const numberOfStars = Number(currentListing[0].rating);
 
       // Initializing an array with 5 items
       const listingRating = Array.from(Array(totalRatings))
