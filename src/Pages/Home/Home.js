@@ -9,7 +9,7 @@ import { listings } from '../../data/listings'
 export function Home() {
   return (
     <>
-      <Banner img={HeaderBanner} alt={"Partout et aillers"} text={"Chez vous, partout et ailleurs"}/>
+      <Banner img={HeaderBanner} alt={"Partout et ailleurs"} text={"Chez vous, partout et ailleurs"}/>
       <ul className="cards-list">
         {listings.map((item, index) => {
           return (
