@@ -18,9 +18,10 @@ export function Listing() {
   const params = useParams();
   const listingId = params.id;
 
+  // We add all our listing IDs in a new array
   let allListingsIds = listings.reduce((acc, curVal) => acc.concat(curVal.id), []);
 
-  // If the what's after listing/ in the URL doesn't match our listing ids, we render the NotFound component
+  // If what's after listing/ in the URL doesn't match our listing ids, we render the NotFound component
   if(allListingsIds.includes(listingId) === false) {
     return <NotFound />
   } 

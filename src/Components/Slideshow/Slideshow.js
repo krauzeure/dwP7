@@ -7,9 +7,8 @@ import { useState } from 'react'
 
 export function Slideshow(props) {
 
-    // Creating our state
+    // Creating our states
     const [currentImg, setCurrentImg] = useState(0);
-
     const [startTouch, setStartTouch] = useState(0);
 
     // Counting the number of photos for this listing
@@ -50,7 +49,7 @@ export function Slideshow(props) {
     }
 
     /* The touchEnd function gets the X position at the end of the touch
-    Then it calculates the total distance of the swipe and call the nextPhoto or previousPhoto functions depending on the swipe.
+    Then it calculates the total distance of the swipe and calls the nextPhoto or previousPhoto functions depending on the swipe.
     After calling the photo function, we clear our state */
     const touchEnd = (e) => {
         const endTouch = e.changedTouches[0].screenX;
