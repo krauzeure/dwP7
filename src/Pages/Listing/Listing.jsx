@@ -26,11 +26,13 @@ export function Listing() {
     return <NotFound />
   } 
       // Getting the listings information from the ID
-      const currentListing = listings.filter(el => el.id === listingId);
+      const listingArray = listings.filter(el => el.id === listingId);
+      // Reducing to one element to remove the need for the index 0
+      const currentListing = listingArray.shift();
 
       // Setting the total number of stars and the listings number of stars
       const totalRatings = 5;
-      const numberOfStars = Number(currentListing[0].rating);
+      const numberOfStars = Number(currentListing.rating);
 
       // Initializing an array with 5 items
       const listingRating = Array.from(Array(totalRatings))
@@ -40,17 +42,17 @@ export function Listing() {
   return (
     <div className="listing-page">
 
-        <Slideshow photos={currentListing[0].pictures} title={currentListing[0].title}/>
+        <Slideshow photos={currentListing.pictures} title={currentListing.title}/>
 
         <section className="listing-main-info">
 
           <div className="listing-info-tags">
             <div className="listing-info">
-              <h1>{currentListing[0].title}</h1>
-              <p>{currentListing[0].location}</p>
+              <h1>{currentListing.title}</h1>
+              <p>{currentListing.location}</p>
             </div>
             <div className="listing-all-tags">
-              {currentListing[0].tags.map(item => {
+              {currentListing.tags.map(item => {
                 return (
                   <li key={`${listingId}-${item}`}><Tag text={item} /></li>
                 )
@@ -60,8 +62,8 @@ export function Listing() {
 
           <div className="listing-host-rating">
             <div className="listing-host">
-                <p>{currentListing[0].host.name}</p>
-                <img src={currentListing[0].host.picture} alt={currentListing[0].host.name} />
+                <p>{currentListing.host.name}</p>
+                <img src={currentListing.host.picture} alt={currentListing.host.name} />
             </div>
             <div className="listing-rating">
               {listingRating.map((item, index) => {
@@ -73,9 +75,9 @@ export function Listing() {
         </section>
 
       <section className="listing-desc-equip">
-        <Collapse heading="Description" text={currentListing[0].description} />
+        <Collapse heading="Description" text={currentListing.description} />
         <Collapse heading="Équipements" text={
-          currentListing[0].equipments.map(item => {
+          currentListing.equipments.map(item => {
             return <li key={`${listingId}-${item}`}>{item}</li>
           })
         } />
