@@ -16,7 +16,6 @@ export function Slideshow(props) {
 
     // Function to go to the next photo with an exception if we're on the last photo
     const nextPhoto = () => {
-
         if(currentImg + 1 === numberOfImages) {
             setCurrentImg(0);
         } else {
@@ -26,7 +25,6 @@ export function Slideshow(props) {
 
     // Function to go to the previous photo with an exception if we're on the first photo
     const previousPhoto = () => {
-
         if(currentImg === 0) {
             setCurrentImg(numberOfImages - 1);
         } else {
