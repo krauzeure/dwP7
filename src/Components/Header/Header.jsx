@@ -4,6 +4,8 @@ import './Header.css'
 
 import { Link, NavLink } from 'react-router-dom'
 
+/* The Header component creates a header element with a link on the logo, and navlinks in the nav element.
+If the link is active, we apply a different style through a class. */
 export function Header() {
   return (
     <header>

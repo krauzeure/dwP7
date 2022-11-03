@@ -1,5 +1,7 @@
 import './Banner.css'
 
+/* The Banner component gets the source, image, alt text and text in props.
+Then it creates a section element with the relevant information. */
 export function Banner(props) {
 
   return (

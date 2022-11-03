@@ -2,6 +2,7 @@ import Logo from './logo.png'
 
 import './Footer.css'
 
+/* The Footer component creates a footer element with logo and text. */
 export function Footer() {
   return (
     <footer className='footer-container'>

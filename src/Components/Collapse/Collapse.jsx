@@ -4,6 +4,10 @@ import './Collapse.css'
 
 import { useState, useRef, useEffect } from 'react'
 
+/* The Collapse component uses 2 states: the toggle and the height of the element.
+It contains a function to change our toggle state, a function to update our height state depending on the height the element will need when expanded.
+It updates the height of the element on first load, and when the window is resized.
+Depending on the source passed in props and the toggle state, it applies different classes. */
 export function Collapse(props) {
 
     // Creating our states
