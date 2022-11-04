@@ -12,6 +12,11 @@ import { NotFound } from '../NotFound/NotFound';
 
 import { useParams } from 'react-router-dom'
 
+/* On the Listing page, we use the useParams hook to get the listing ID from the URL.
+The we check if the ID in the URL matches our list of listing ids. If not, we render the NotFound component.
+We use the array.from and fill methods to create an array with the stars for the rating.
+Then we use the Slideshow component, passing the listing pictures as props.
+We create the listing page with different blocks, using the map method to show the tags, ratings and equipments. */
 export function Listing() {
 
   // Getting the ID from the page URL

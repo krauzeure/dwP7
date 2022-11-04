@@ -5,6 +5,8 @@ import './About.css'
 import { Banner } from '../../Components/Banner/Banner'
 import { Collapse } from '../../Components/Collapse/Collapse'
 
+/* The About page uses the Banner component with the alt text, image and source in props.
+It then uses the Collapse component several times with heading, text and source props. */
 export function About() {
   return (
     <>

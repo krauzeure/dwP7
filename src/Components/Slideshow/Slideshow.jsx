@@ -5,6 +5,11 @@ import './Slideshow.css'
 
 import { useState } from 'react'
 
+/* The Slideshow component uses two states and gets the number of photos from the listing props.
+It uses 2 functions to go to the next or previous photos, they can also be activated by keyboard or touch.
+It creates a section element for the slideshow with all the listings photo side by side but only showing the current one.
+The pictures are translated horizontally depending on their index and the current image.
+If the listing only has one image, the component doesn't show the arrows to switch photos. */
 export function Slideshow(props) {
 
     // Creating our states

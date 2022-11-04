@@ -6,6 +6,8 @@ import { Banner } from '../../Components/Banner/Banner'
 import { ListingCard } from '../../Components/ListingCard/ListingCard'
 import { listings } from '../../data/listings'
 
+/* The Home page uses the Banner component with the alt text, image and source in props.
+It uses the map method to create the different listing cards with the ListingCard component. */
 export function Home() {
   return (
     <>

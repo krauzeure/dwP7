@@ -5,6 +5,7 @@ import { NotFound } from './Pages/NotFound/NotFound'
 
 import { Routes, Route } from 'react-router-dom'
 
+/* The AppRoutes function details the routes for our appplication */
 export function AppRoutes() {
   return (
     <Routes>
