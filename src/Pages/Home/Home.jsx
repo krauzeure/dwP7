@@ -11,7 +11,7 @@ It uses the map method to create the different listing cards with the ListingCar
 export function Home() {
   return (
     <>
-      <Banner img={HeaderBanner} alt={"Partout et ailleurs"} text={"Chez vous, partout et ailleurs"}/>
+      <Banner img={HeaderBanner} alt={"Chez vous, partout et ailleurs"} text={"Chez vous, partout et ailleurs"}/>
       <ul className="cards-list">
         {listings.map((item, index) => {
           return (
