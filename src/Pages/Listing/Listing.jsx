@@ -82,10 +82,10 @@ export function Listing() {
         </section>
 
       <section className="listing-desc-equip">
-        <Collapse heading="Description" text={currentListing.description} />
+        <Collapse heading="Description" text={<p>{currentListing.description}</p>} />
         <Collapse heading="Équipements" 
           text={
-            <ul>
+            <ul className="listing-equip">
               {currentListing.equipments.map(item => {
                 return <li key={`${listingId}-${item}`}>{item}</li>})}
             </ul>

@@ -40,7 +40,6 @@
 
 .listing-host p {
     max-width: 100px;
-    white-space: wrap;
     text-align: right;
 }
 
@@ -73,6 +72,10 @@
 
 .listing-desc-equip div:nth-child(1) {
     margin-right: 75px;
+}
+
+.listing-equip {
+    padding: 30px 20px;
 }
 
 @media screen and (max-width: 750px) {
