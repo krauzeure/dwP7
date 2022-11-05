@@ -9,7 +9,7 @@ If the link is active, we apply a different style through a class. */
 export function Header() {
   return (
     <header>
-      <Link to="/"><img src={logo} alt=""/></Link>
+      <Link to="/" aria-label="Aller à la page d'accueil"><img src={logo} alt=""/></Link>
       <nav>
           <NavLink 
           to="/" end

@@ -57,11 +57,13 @@ export function Listing() {
               <p>{currentListing.location}</p>
             </div>
             <div className="listing-all-tags">
-              {currentListing.tags.map(item => {
-                return (
-                  <li key={`${listingId}-${item}`}><Tag text={item} /></li>
-                )
-              })}
+              <ul>
+                {currentListing.tags.map(item => {
+                  return (
+                    <li key={`${listingId}-${item}`}><Tag text={item} /></li>
+                  )
+                })}
+              </ul>
             </div>
           </div>
 
@@ -81,11 +83,14 @@ export function Listing() {
 
       <section className="listing-desc-equip">
         <Collapse heading="Description" text={currentListing.description} />
-        <Collapse heading="Équipements" text={
-          currentListing.equipments.map(item => {
-            return <li key={`${listingId}-${item}`}>{item}</li>
-          })
-        } />
+        <Collapse heading="Équipements" 
+          text={
+            <ul>
+              {currentListing.equipments.map(item => {
+                return <li key={`${listingId}-${item}`}>{item}</li>})}
+            </ul>
+          }
+        />
       </section>
 
     </div>
