@@ -1,4 +1,4 @@
-# Développeur Web Projet 7
+# Web Developer Project 7
 
 ## Context
 
@@ -20,4 +20,4 @@ Once you've downloaded the repo, install the project with the `npm install` comm
 
 ## Status
 
-This project is ongoing.
+This project is done.
