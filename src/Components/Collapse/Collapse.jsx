@@ -61,7 +61,7 @@ export function Collapse(props) {
         ref={refHeight}
         style={{ height: toggle ? `${heightEl}` : "0px"}}
         >
-            <p>{props.text}</p>
+        <p>{props.text}</p>
         </div>
     </div>
   )

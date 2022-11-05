@@ -14,7 +14,7 @@
     font-weight: 500;
 }
 
-.listing-all-tags {
+.listing-all-tags ul {
     display: flex;
     margin-top: 20px;
     flex-wrap: wrap;
