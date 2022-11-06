@@ -4,6 +4,7 @@
     background-color: var(--main);
     padding: 15px;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .collapse-visible img {
