@@ -32,11 +32,8 @@ export function Collapse(props) {
         setHeightEl(`${refHeight.current.scrollHeight}px`);
     }, [])
 
-    // We use UseEffect to listen to a page resize and call the updateHeightEl function
-    useEffect(() => {
-        window.addEventListener("resize", updateHeightEl);
-        return () => window.removeEventListener("resize", updateHeightEl);
-    }, [])
+    // We use an event listener that calls our updateHeightEl function on window resize
+    window.addEventListener("resize", updateHeightEl);
 
     // Defining our classes depending on the layout we want
     let classes = "";
